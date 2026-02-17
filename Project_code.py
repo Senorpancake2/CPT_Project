@@ -5,7 +5,7 @@ possible_rolls = [5, 7, "$"]
 
 
 
-def chance(a,b,c):   #keeps repeating same three numbers
+def chance(a,b,c):   
 
    balance = 100
    num_of_spins = int(input("\nStarting balance: 100\n Cost per spin: 10\n How many times would you like to spin?: "))
@@ -35,11 +35,11 @@ def chance(a,b,c):   #keeps repeating same three numbers
       b = random.choice(possible_rolls)
       c = random.choice(possible_rolls)
 
-      if num_of_spins == 0 and balance >= 10:
+      if num_of_spins == 0 and balance >= 10:         #only runs on last spin
          continue_ = input("\nWould you like to keep spinning? (Y) or (N): ")
 
 
-      if num_of_spins == 0 and balance >= 10 and continue_ == "Y":
+      if num_of_spins == 0 and balance >= 10 and continue_ == "Y":     #only runs on last spin
          num_of_spins = int(input("\nHow many times would you like to spin?: "))
        
    if balance < 10:
