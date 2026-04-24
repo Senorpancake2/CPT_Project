@@ -36,10 +36,11 @@ def chance(a,b,c):
       c = random.choice(possible_rolls)
 
       if num_of_spins == 0 and balance >= 10:         #only runs on last spin
-         continue_ = input("\nWould you like to keep spinning? (Y) or (N): ")
+         continue_temp = input("\nWould you like to keep spinning? (Y) or (N): ")
+         continue_ = continue_temp.lower()
 
 
-      if num_of_spins == 0 and balance >= 10 and continue_ == "Y":     #only runs on last spin
+      if num_of_spins == 0 and balance >= 10 and continue_ == "y":     #only runs on last spin
          num_of_spins = int(input("\nHow many times would you like to spin?: "))
        
    if balance < 10:
